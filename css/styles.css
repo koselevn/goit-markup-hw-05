@@ -820,11 +820,12 @@ button {
 
 }
 
-.form-checkbox-input:checked .label-checkbox-span{
+.form-checkbox-input:checked+.modal-form-label .label-checkbox-span {
     background-color: #404bbf;
+    border-color: #404bbf;
 }
 
-.form-checkbox-input:checked .odal-accept-svg {
+.form-checkbox-input:checked+.modal-form-label .modal-accept-svg {
     fill: #F4F4FD;
 }
 
