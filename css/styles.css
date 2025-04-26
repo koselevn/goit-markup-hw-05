@@ -601,9 +601,6 @@ button {
 /* Modal */
 
 .modal-overlay{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -616,14 +613,24 @@ button {
 }
 
 .modal-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #fcfcfc;
 
     width: 408px;
-    min-height: 80%;
+    min-height: 584px;
     border-radius: 4px;
     padding: 24px;
 
     overflow-y: auto;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn{
@@ -633,15 +640,31 @@ button {
     margin-left: auto;
     border-radius: 50%;
     background: #e7e9fc;
-    border: solid 1px #D0D2E3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    margin-bottom: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     
     width: 24px;
     height: 24px;
 }
 
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-btn:hover .modal-close-svg,
+.modal-btn:focus .modal-close-svg{
+    fill: #ffffff;
+}
+
 .modal-close-svg{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title{
@@ -656,6 +679,12 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+
+    margin-top: 48px;
+}
+
+.modal-abs-input-div {
+    margin-bottom: 8px;
 }
 
 .modal-form-label {
@@ -668,8 +697,6 @@ button {
 
 .modal-input-div {
     position: relative;
-
-    margin-bottom: 8px;
 }
 
 .modal-input-svg {
