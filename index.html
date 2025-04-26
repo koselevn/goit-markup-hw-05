@@ -384,6 +384,48 @@
             </div>
         </div>
     </footer>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-btn">
+                <svg class="modal-close-svg" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <p class="modal-title">Leave your contacts and we will call you back</p>
+            <form>
+                <label class="modal-form-label" for="name">Name</label>
+                <div class="modal-input-div">
+                    <svg class="modal-input-svg" width="12" height="12">
+                        <use href="./images/icons.svg#icon-people"></use>
+                    </svg>
+                    <input class="modal-form-input" type="text" name="name" id="name">
+                </div>
+                <label class="modal-form-label" for="phone">Phone</label>
+                <div class="modal-input-div">
+                    <svg class="modal-input-svg" width="13" height="13">
+                        <use href="./images/icons.svg#icon-tel"></use>
+                    </svg>
+                    <input class="modal-form-input" type="tel" name="phone" id="phone">
+                </div>
+                <label class="modal-form-label" for="email">Email</label>
+                <div class="modal-input-div">
+                    <svg class="modal-input-svg" width="15" height="12">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                    <input class="modal-form-input" type="email" name="email" id="email">
+                </div>
+                <label class="modal-form-label" for="comment">Comment</label>
+                <div class="modal-input-div">
+                    <textarea name="comment" id="comment" class="modal-form-textarea" placeholder=""></textarea>
+                </div>
+                <div class="modal-input-div">
+                    <input type="checkbox">
+                    <label class="modal-form-label" for="comment">I accept the terms and conditions of the <a href="" class="modal-policy-link">Privacy Policy</a></label>
+                </div>
+                <button class="modal-form-btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
