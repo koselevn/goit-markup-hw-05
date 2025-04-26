@@ -737,13 +737,17 @@ button {
 }
 
 .modal-form-textarea {
-    padding-left: 16px;
-    padding-top: 8px;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
 
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-textarea::placeholder {
     font-weight: 400;
@@ -799,4 +803,31 @@ button {
 .modal-form-btn:active,
 .modal-form-btn:focus {
     background-color: #404BBF;
+}
+
+.label-checkbox-span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+
+    fill: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.form-checkbox-input:checked .label-checkbox-span{
+    background-color: #404bbf;
+}
+
+.form-checkbox-input:checked .odal-accept-svg {
+    fill: #F4F4FD;
+}
+
+.modal-accept-svg {
+
 }
